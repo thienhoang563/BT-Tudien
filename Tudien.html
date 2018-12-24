@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Từ điển mini </h1>
+<input type="text" id="Tratu">
+<button id="search" onclick="Tim()">Search</button><br>
+Tiếng Việt là : </br>
+<div id="result"></div>
+<script>
+    var English = ["Cat","Dog","Chicken","Fish","Rabbit"];
+    var Vietnamese = ["Con Mèo","Con Chó","Con Gà","Con Cá","Con Thỏ"];
+    function Tim() {
+        var tu= document.getElementById("Tratu").value;
+        var ketqua =0;
+        for (var i=0; i< English.length;i++){
+            if (tu == English[i]){
+                document.getElementById("result").innerHTML=Vietnamese[i];
+                ketqua =1;
+            }
+        }
+        if (ketqua ==0){
+            document.getElementById("result").innerHTML="Không có kết quả.";
+        }
+
+    }
+</script>
+</body>
+</html>
